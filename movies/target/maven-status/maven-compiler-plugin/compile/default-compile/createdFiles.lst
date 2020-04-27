@@ -1,0 +1,4 @@
+com\cinema\movie\movies\controller\MoviesController.class
+com\cinema\movie\movies\model\Movie.class
+com\cinema\movie\movies\repository\MovieRepository.class
+com\cinema\movie\movies\service\MovieService.class

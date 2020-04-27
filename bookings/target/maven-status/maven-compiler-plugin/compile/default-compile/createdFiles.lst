@@ -1,0 +1,7 @@
+com\cinema\bookings\service\BookingService.class
+com\cinema\bookings\BookingsApplication.class
+com\cinema\bookings\controller\BookingController.class
+com\cinema\bookings\model\Ticket.class
+com\cinema\bookings\model\Booking.class
+com\cinema\bookings\repository\BookingRepository.class
+com\cinema\bookings\repository\TicketRepository.class
