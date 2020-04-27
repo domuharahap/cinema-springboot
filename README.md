@@ -72,3 +72,6 @@ Add Bookings:
 }'`
 
 ### Postman Result sample
+
+Movie Result example from postman
+![Image description](https://github.com/domuharahap/cinema-springboot/blob/master/docs/getMovies.jpg)
