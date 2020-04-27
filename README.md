@@ -6,6 +6,14 @@ This Cinemas-spring-boot repository is a simple microservices java Spring Boot. 
 * Bookings
 * api-gateway
 
+### Prerequisites
+
+Following software packages is required to build and run cinemas-spring-boot applications:
+
+* Java
+* Maven
+* Docker and Compose
+
 ### How to run
 
 After clone the project, navigate to each modules (movies/showtimes etc) to build project and dokcer images for each of the modules. run below script to build project and docker images:
