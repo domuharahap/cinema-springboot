@@ -1,0 +1,56 @@
+version: "3"
+services:
+ api-gateway:
+  image: api-gateway
+  ports:
+   - "8080:8080"
+  links:
+   - movies
+   - bookings
+   - showtimes
+  networks:
+   - cinema-networks
+
+ movies:
+  image: movies
+  networks:
+   - cinema-networks
+  links:
+   - mysqldb
+  depends_on:
+   - mysqldb
+ 
+ bookings:
+  image: bookings
+  networks:
+   - cinema-networks
+  links:
+   - mysqldb
+  depends_on:
+   - mysqldb
+ 
+ showtimes:
+  image: showtimes
+  links:
+   - mysqldb
+  networks:
+   - cinema-networks
+  depends_on:
+   - mysqldb
+
+ mysqldb:
+  image: mysql:8
+  networks:
+   - cinema-networks
+  environment:
+   MYSQL_ROOT_PASSWORD: root
+   MYSQL_DATABASE: cinema
+   MYSQL_USER: admin
+   MYSQL_PASSWORD: admin
+   volumes:
+   - "/opt/data/mysql:/var/lib/mysql"
+  ports:
+   - "3306:3306"
+  
+networks:
+ cinema-networks:
