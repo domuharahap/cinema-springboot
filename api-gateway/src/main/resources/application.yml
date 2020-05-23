@@ -4,10 +4,13 @@ zuul:
   routes:
     movies:
       path: /api/movies/**
-      url: http://localhost:8081/api/movies
+      url: http://movies:8081/api/movies
     showtimes:
       path: /api/showtime/**
-      url: http://localhost:8082/api/showtime
+      url: http://showtimes:8082/api/showtime
     bookings:
       path: /api/booking/**
-      url: http://localhost:8083/api/booking
+      url: http://bookings:8083/api/booking
+    authentications:
+      path: /api/auth/**
+      url: http://authentications:8084/api/auth
